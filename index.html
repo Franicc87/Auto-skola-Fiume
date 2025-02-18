@@ -72,7 +72,7 @@
 
   <div class="hero d-flex align-items-start justify-content-center">
     <div class="ms-5 mt-5 text-center">
-      <img src="images/main-logo-bp.png">
+      <img class="img-fluid" src="images/main-logo-bp.png">
     </div>
   </div>
 
@@ -329,11 +329,11 @@
           const counter = entry.target;
           const targetValue = parseInt(counter.getAttribute('data-target'));
           let currentValue = 0;
-          const type = counter.getAttribute('data-type'); // Dohvati tip (plus ili perc)
+          const type = counter.getAttribute('data-type');
 
-          // Odredi brzinu i korak (ovisno o tome koliko je ciljana vrijednost)
-          const increment = Math.ceil(targetValue / 100); // npr. 100 koraka
-          const speed = 20; // manja vrijednost => brže animiranje
+
+          const increment = Math.ceil(targetValue / 100);
+          const speed = 20;
 
           const updateCount = () => {
             if (currentValue < targetValue) {
@@ -347,20 +347,16 @@
           };
 
           updateCount();
-          // Nakon što je animacija pokrenuta, više ne pratimo ovaj element
           observer.unobserve(counter);
         }
       });
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-      // Pronađi sve elemente s klasom .counter
       const counters = document.querySelectorAll('.counter');
-      // Inicijaliziraj Intersection Observer
       const observer = new IntersectionObserver(animateCounters, {
-        threshold: 0.5, // 0.5 => element treba biti 50% vidljiv
+        threshold: 0.5,
       });
-      // Poveži svaki counter s observerom
       counters.forEach((counter) => {
         observer.observe(counter);
       });
