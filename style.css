@@ -1,0 +1,663 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #e9f0f3;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+
+  to {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+#vozacka h1,
+footer h5,
+footer ul,
+footer a,
+.line,
+.image-container,
+img,
+.contact-section,
+#desno,
+.wrapper {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 20%;
+}
+
+/* NavBAR */
+.navbar {
+  font-family: "Montserrat", sans-serif;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar .nav-link {
+  font-size: medium;
+}
+
+.navbar .nav-link {
+  color: white !important;
+}
+
+.navbar .nav-link:hover {
+  color: #0baee4 !important;
+}
+
+.navbar.scrolled .nav-link:hover {
+  color: #333333 !important;
+}
+
+.navbar .nav-item ion-icon:hover {
+  color: #0baee4 !important;
+}
+
+.navbar.scrolled .nav-item ion-icon:hover {
+  color: #333333 !important;
+}
+
+.navbar .nav-item ion-icon {
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar.scrolled .nav-item ion-icon {
+  color: white;
+}
+
+.navbar-nav.center-nav {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (max-width: 991px) {
+  .navbar-nav.center-nav {
+    position: static;
+    transform: none;
+    text-align: center;
+  }
+
+  .social-links {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 15px;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+
+  .social-links .nav-item {
+    list-style: none;
+  }
+
+  .social-links a {
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+/* Hero dio */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(82, 53, 6, 0.3), rgba(11, 174, 228, 0.707)),
+    url(images/sva_vozila.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero h1 {
+  font-size: 60px;
+  color: #333333;
+}
+
+.hero img {
+  margin-top: 150px;
+}
+
+.hero h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: xx-large;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: xx-large;
+  color: #0baee4;
+}
+
+/* about dio */
+
+
+.custom-section {
+  padding: 80px 0;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  max-width: 70%;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px #0baee4;
+}
+
+.blue-line {
+  width: 60px;
+  height: 3px;
+  background-color: #0baee4;
+  margin: 10px 0 20px;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.subheading {
+  font-weight: 600;
+}
+
+.about-text h2 {
+  font-weight: 700;
+  font-size: 2.2rem;
+  color: #0baee4;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  color: #333333;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.stats {
+  margin-top: 30px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #ff3366;
+  text-align: center;
+}
+
+.stats span {
+  display: block;
+  color: #0baee4;
+  font-size: 20px;
+
+}
+
+.counter {
+  font-size: 40px !important;
+  text-shadow: 5px 5px 15px #0baee4;
+
+}
+
+/* kraj - about dio */
+
+/* Vozacka dio */
+
+#vozacka {
+  background-image: url(images/gumepoz.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#vozacka h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: xx-large;
+  color: #333333;
+}
+
+.istaknuto {
+  color: #0baee4 !important;
+  font-weight: 600 !important;
+}
+
+#vozacka h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: x-large;
+  color: #333333;
+}
+
+/* Vozacka dio - cards */
+.wrapper {
+  padding: 10px 10%;
+}
+
+.box-area {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+}
+
+.box {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px #0baee4;
+}
+
+.box img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.overlay {
+  width: 100%;
+  height: 0;
+  background: linear-gradient(transparent, #0baee4 58%);
+  border-radius: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  text-align: center;
+  font-size: 14px;
+  transition: height 0.5s;
+}
+
+.overlay h3 {
+  font-weight: 500;
+  margin-top: 80%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.overlay a {
+  color: #262626;
+  margin-bottom: 40px;
+  text-decoration: none;
+  font-size: 14px;
+  background: #fff;
+  border-radius: 50px;
+  text-align: center;
+  padding: 5px 15px;
+}
+
+.box:hover img {
+  transform: scale(1.1);
+}
+
+.box:hover .overlay {
+  height: 100%;
+}
+
+/* KRAJ - Vozacka dio - cards */
+
+/* Kontakt */
+.contact-section {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 5px 5px 15px #0baee4;
+  color: rgb(51, 51, 51);
+}
+
+.contact-section h2,
+h5,
+p {
+  color: #333333;
+  font-family: "Montserrat", sans-serif;
+}
+
+.contact-info h5 {
+  font-weight: 600;
+}
+
+.contact-info p {
+  margin-bottom: 0.5rem;
+}
+
+.contact-info i {
+  color: #0d6efd;
+  /* Primarna boja iz Bootstrapa */
+  margin-right: 10px;
+}
+
+.btn {
+  background-color: #0baee4;
+  /* Promjena boje gumba */
+  border-color: #0baee4;
+  /* Promjena boje ruba */
+}
+
+.btn:hover .stars {
+  display: block;
+  filter: drop-shadow(0 0 10px #fffdef)
+}
+
+ion-icon {
+  color: #0baee4;
+}
+
+/* KRAJ - kontakt */
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: xx-large;
+  color: white;
+}
+
+h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: x-large;
+  color: white;
+}
+
+#textic {
+  font-weight: 400;
+  font-style: normal;
+  font-size: large;
+}
+
+#cijene h2 {
+  color: #0baee4;
+}
+
+#cijene {
+  color: #0baee4;
+}
+
+/* footer */
+footer {
+  padding-top: 60px;
+  background-color: #0baee4;
+}
+
+.footer-top {
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+
+footer li,
+footer p,
+footer a {
+  color: white;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer a:hover {
+  color: #333333;
+}
+
+footer .line {
+  width: 40px;
+  height: 4px;
+  background-color: white;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 100px;
+}
+
+.social-icons a:hover {
+  background-color: #333333;
+  color: white;
+}
+
+
+/* STRANICA PREDAVANJA */
+
+.hero-p {
+  height: 45vh;
+  background: linear-gradient(rgba(82, 53, 6, 0.3), rgba(11, 174, 228, 0.507)),
+    url(images/cunjevi.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+
+
+
+
+/* Stilizacija sadržaja unutar hero sekcije */
+.hero-content {
+  color: #fff;
+  padding: 0 15px;
+  /* osigurava malo margine sa strana na manjim ekranima */
+}
+
+#pr-pp h2 {
+  color: #333333;
+}
+
+
+
+#kont .img-cover {
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+#kont .right-col {
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+
+#kont h2 {
+  color: #333333;
+}
+
+
+@media (max-width: 1140px) {
+
+  #kont .img-cover {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 0;
+  }
+
+  #kont .right-col {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 30px;
+  }
+}
+
+
+
+
+
+.price-tabs {
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 20px 0 rgba(39, 39, 39, 0.1);
+  box-shadow: 0 5px 20px 0 rgba(39, 39, 39, 0.1);
+  display: inline-block;
+  padding: 7px;
+  border-radius: 40px;
+  border: 1px solid #00b5ec;
+  margin-bottom: 45px;
+}
+
+@media (min-width: 768px) {
+  .price-tabs {
+    margin-bottom: 60px;
+  }
+}
+
+.price-tabs .nav-link {
+  color: #00b5ec;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  padding: 12px 35px;
+  display: inline-block;
+  text-transform: capitalize;
+  border-radius: 40px;
+  transition: all 0.3s ease;
+}
+
+.price-tabs .nav-link.active {
+  background-color: #00b5ec;
+  color: #fff;
+}
+
+.price-item {
+  background-color: #fff;
+  -webkit-box-shadow: 0 5px 30px 0 rgba(39, 39, 39, 0.15);
+  box-shadow: 0 5px 30px 0 rgba(39, 39, 39, 0.15);
+  border-radius: 10px;
+}
+
+.price-item .price-top {
+  padding: 50px 0 35px;
+  background-color: #00b5ec;
+  border-radius: 10px;
+  position: relative;
+  z-index: 0;
+}
+
+.price-item .price-top:after {
+  height: 50px;
+  width: 100%;
+  background-color: #00b5ec;
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -17px;
+  transform: skewY(5deg);
+
+}
+
+.price-item .price-top * {
+  color: #fff;
+}
+
+.price-item .price-top h2 {
+  font-weight: 700;
+  color: #fff !important;
+}
+
+.price-item .price-top h2 sup {
+  font-size: 0.35em;
+  font-weight: 500;
+}
+
+.price-item .price-content {
+  padding: 30px;
+  padding-bottom: 40px;
+}
+
+.price-item .price-content li {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.price-item .price-content .zmdi-check {
+  color: #28a745;
+}
+
+.price-item .price-content .zmdi-close {
+  color: #f00;
+}
+
+.popular {
+  background-color: #00b5ec;
+}
+
+.popular .price-top {
+  background-color: #fff;
+}
+
+.popular .price-top h2 {
+  color: #00b5ec !important;
+}
+
+.price-top .text-capitalize-s {
+  color: #333333 !important;
+}
+
+.popular .price-top:after {
+  background-color: #fff;
+}
+
+.popular .price-top h4 {
+  color: #333333;
+}
+
+.popular .price-top h2,
+.popular .price-top span,
+.popular .price-top sup {
+  color: #00b5ec;
+}
+
+.popular .price-content ul * {
+  color: #fff !important;
+}
+
+.price-content .btn.btn-custom:last-of-type {
+  background-color: #00b5ec !important;
+  border-color: #00b5ec !important;
+  color: white !important;
+}
+
+.popular .price-content .btn.btn-custom {
+  background-color: #fff !important;
+  border-color: #fff !important;
+  color: #00b5ec !important;
+}
+
+#video h2 {
+  color: #00b5ec;
+}
